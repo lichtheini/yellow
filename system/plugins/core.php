@@ -485,6 +485,7 @@ class YellowPage
 			if(!$this->isExisting("titleNavigation")) $this->set("titleNavigation", $this->get("title"));
 			if(!$this->isExisting("titleHeader")) $this->set("titleHeader", $titleHeader);
 			if($this->get("status")=="hidden") $this->available = false;
+            if($this->get("status")=="navhidden") $this->visible = false;
 			$this->set("pageRead", $this->yellow->lookup->normaliseUrl(
 				$this->yellow->config->get("serverScheme"),
 				$this->yellow->config->get("serverAddress"),

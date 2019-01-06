@@ -17,10 +17,12 @@
 <?php if($yellow->page->isPage("sidebar")) $yellow->page->set("pageClass", $yellow->page->get("pageClass")." with-sidebar") ?>
 <div class="<?php echo $yellow->page->getHtml("pageClass") ?>">
 <div class="header">
+<div class="pagemargin">
 <div class="sitename">
 <h1><a href="<?php echo $yellow->page->base."/" ?>"><i class="sitename-logo"></i><?php echo $yellow->page->getHtml("sitename") ?></a></h1>
-<?php if($yellow->page->isExisting("tagline")): ?><h2><?php echo $yellow->page->getHtml("tagline") ?></h2><?php endif ?>
-</div>
+<?php if($yellow->page->isExisting("tagline")): ?><p><?php echo $yellow->page->getHtml("tagline") ?></p><?php endif ?></div>
 <div class="sitename-banner"></div>
+<div style="clear: both;"></div>
+</div>
 <?php $yellow->snippet($yellow->page->get("navigation")) ?>
 </div>
